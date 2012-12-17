@@ -115,7 +115,7 @@ const struct mcu_t SIM_CORENAME = {
 	},
 
 	.uart0 = {
-		.disabled = AVR_IO_REGBIT(PRR,PRUSART0),
+		.disabled = AVR_IO_REGBIT(PRR0, PRUSART0),
 		.name = '0',
 		.r_udr = UDR0,
 
@@ -147,7 +147,7 @@ const struct mcu_t SIM_CORENAME = {
 		},
 	},
 	.uart1 = {
-		.disabled = AVR_IO_REGBIT(PRR,PRUSART1),
+		.disabled = AVR_IO_REGBIT(PRR0 ,PRUSART1),
 		.name = '1',
 		.r_udr = UDR1,
 
@@ -273,7 +273,7 @@ const struct mcu_t SIM_CORENAME = {
 	},
 	.timer1 = {
 		.name = '1',
-		.disabled = AVR_IO_REGBIT(PRR,PRTIM1),
+		.disabled = AVR_IO_REGBIT(PRR0 ,PRTIM1),
 		.wgm = { AVR_IO_REGBIT(TCCR1A, WGM10), AVR_IO_REGBIT(TCCR1A, WGM11),
 					AVR_IO_REGBIT(TCCR1B, WGM12), AVR_IO_REGBIT(TCCR1B, WGM13) },
 		.wgm_op = {
@@ -381,7 +381,7 @@ const struct mcu_t SIM_CORENAME = {
 		}
 	},
 	.spi = {
-		.disabled = AVR_IO_REGBIT(PRR,PRSPI),
+		.disabled = AVR_IO_REGBIT(PRR0 ,PRSPI),
 
 		.r_spdr = SPDR,
 		.r_spcr = SPCR,
@@ -399,7 +399,7 @@ const struct mcu_t SIM_CORENAME = {
 	},
 	
 	.twi = {
-		.disabled = AVR_IO_REGBIT(PRR,PRTWI),
+		.disabled = AVR_IO_REGBIT(PRR0 ,PRTWI),
 
 		.r_twcr = TWCR,
 		.r_twsr = TWSR,
