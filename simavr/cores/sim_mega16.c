@@ -22,7 +22,7 @@
  
 #include "sim_avr.h"
 
-#define SIM_VECTOR_SIZE	2
+#define SIM_VECTOR_SIZE	4
 #define SIM_MMCU		"atmega16"
 #define SIM_CORENAME	mcu_mega16
 
