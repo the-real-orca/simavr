@@ -76,11 +76,11 @@ ifeq (${shell uname}, Linux)
 libsimavr	:	${OBJ}/libsimavr.so
 endif
 
-${OBJ}/${target}.elf	: ${OBJ}/${target}.o
+${OBJ}/${target}.elf	: ${OBJ}/libsimavr.a ${OBJ}/${target}.o
 
 ${target}	: ${OBJ}/${target}.elf
 ifeq (${shell uname -o}, Msys)
-	ln -sf $< $@.exe
+	cp -f $< $@.exe
 else
 	ln -sf $< $@
 endif
